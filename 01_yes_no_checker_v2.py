@@ -11,7 +11,7 @@ def yes_no(question):
         # If no, display the instructions.
         elif response == "no" or response == "n":
             response == "no"
-            return response
+            return
         #If other, rerun the code.
         else:
             print("You need to enter yes or no")

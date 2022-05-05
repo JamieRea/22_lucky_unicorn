@@ -1,4 +1,4 @@
-#Function goes here.
+#Function goes here...
 def yes_no(question):
     valid = False
     while not valid:

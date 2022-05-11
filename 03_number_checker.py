@@ -17,7 +17,7 @@ def yes_no(question):
             print("You need to enter yes or no")
 
 def num_check(question, low, high):
-    error = "Please enter a whole number between 1 and 10\n"
+    error = "Please enter a whole number between 1 and 10"
     valid = False
     while not valid:
         try:

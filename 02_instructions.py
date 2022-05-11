@@ -21,4 +21,4 @@ show_instructions = yes_no("Have you played this game before? ")
 if show_instructions == "yes":
     print("Skipping Instructions...")
 else:
-    print("When the game begins, you will be prompted to enter how much money you want to spend to play.\nYou can spend a maximum of $10, and each dollar equals one round.\nEvery round you get to draw a random token. A donkey is worth nothing, a horse or zebra are worth 50 cents and a unicorn is worth $5.\nAfter the round ends, you can spend more of your earnings to play again.Skipping Instructions...")
+    print("When the game begins, you will be prompted to enter how much money you will be spending to play.\nYou can spend a maximum of $10, and each dollar equals one round.\nEvery round you get to draw a random token. A donkey is worth nothing, a horse or zebra are worth 50 cents and a unicorn is worth $5.\nAfter the round ends, you can spend more of your earnings to play again.Skipping Instructions...")

@@ -1,0 +1,64 @@
+import random
+
+#Functions go here...
+def yes_no(question):
+    valid = False
+    while not valid:
+        # Ask user if they have played before.
+        response = input(question).lower().strip()
+        # If yes, skip the instructions.
+        if response == 'yes' or response == 'y':
+            response = "yes"
+            valid = True
+            return response
+        # If no, display the instructions.
+        elif response == "no" or response == "n":
+            response == "no"
+            valid = True
+            return
+        #If other, rerun the code.
+        else:
+            print("You need to enter yes or no")
+
+def num_check(question, low, high):
+    error = "Please enter a whole number between 1 and 10"
+    valid = False
+    while not valid:
+        try:
+            #Ask the question
+            response = int(input(question))
+            #If the amount is too low / too high;
+            if low < response <= high:
+                return response
+            #Out put an error
+            else:
+                print(error)
+        except ValueError:
+            print(error)
+
+#Main routine goes here...
+show_instructions = yes_no("Have you played this game before? ")
+if show_instructions == "yes":
+    print("Skipping Instructions...")
+else:
+    print("When the game begins, you will be prompted to enter how much money you want to spend to play.\nYou can spend a maximum of $10, and each dollar equals one round.\nEvery round you get to draw a random token. A donkey is worth nothing, a horse or zebra are worth 50 cents and a unicorn is worth $5.\nAfter the round ends, you can spend more of your earnings to play again.Skipping Instructions...")
+
+balance = num_check("How much would you like to play with?", 0, 10)
+print("You will be spending ${}".format(balance))
+
+#Initialising the variables.
+tokens = ["unicorn", "horse", "horse", "zebra", "zebra", "donkey", "donkey", "donkey"]
+
+#Generating the variables.
+for item in range (0,balance):
+    chosen = random.choice(tokens)
+    #Calculating the amount they are worth.
+    if chosen == "unicorn":
+        balance += 4
+    elif chosen == "donkey":
+        balance -= 1
+    else:
+        balance -= 0.5
+    #Output what you got and what it is worth.
+    print("Token: {} , Balance: {}".format(chosen, balance))
+
